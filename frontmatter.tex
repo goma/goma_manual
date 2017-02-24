@@ -1,0 +1,132 @@
+%%% Title Page
+\thispagestyle{empty}
+\begin{titlepage}
+\begin{center}
+%
+\LARGE
+\textbf{Goma 6.1 - A Full-Newton Finite Element Program for Free and Moving Boundary Problems with Coupled Fluid/Solid Momentum, Energy, Mass, and Chemical Species Transport: User’s Guide}
+%
+\vfill
+\end{center}
+P. Randall Schunk, Rekha R. Rao, Ken S. Chen, Duane A. Labreche, Amy C. Sun, Matthew M. Hopkins, Harry K. Moffat, R. Allen Roach, Polly L. Hopkins, Patrick K. Notz, Philip A. Sackinger, Samuel R. Subia, David R. Noble, and Scott A. Roberts
+%
+\centerline{Sandia National Laboratories}
+\centerline{Albuquerque, NM 87185} 
+%
+\vfill
+\centerline{Thomas A. Baer}
+\centerline{Gillette}
+\centerline{Boston, MA 02127}
+%
+\vfill
+\centerline{Edward D. Wilkes}
+\centerline{Corning Inc.}
+\centerline{Corning, NY 14830 }
+%
+\vfill
+\centerline{Robert B. Secor} 
+\centerline{3M Company}
+\centerline{St. Paul, MN 55144}
+%
+\vfill
+\centerline{Kristianto Tjiptowidjojo, Andrew M. Cochrane, and Weston Ortiz}
+\centerline{University of New Mexico}
+\centerline{Albuquerque, NM 87131}	
+%
+\normalsize
+\end{titlepage}
+%
+%
+%
+%%%%Abstract
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Abstract}
+\setcounter{chapter}{0}
+\setcounter{page}{0}
+\pagenumbering{roman}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{}
+\rhead{\thepage}
+\cfoot{}
+%
+\chapter*{Abstract}
+%
+\emph{Goma 6.1} is a finite element program which excels in analyses of multiphysical processes,
+particularly those involving the major branches of mechanics (viz. fluid/solid mechanics, energy
+transport and chemical species transport). \emph{Goma} is based on a full-Newton-coupled algorithm
+which allows for simultaneous solution of the governing principles, making the code ideally
+suited for problems involving closely coupled bulk mechanics and interfacial phenomena.
+Example applications include, but are not limited to, coating and polymer processing flows,
+super-alloy processing, welding/soldering, electrochemical processes, and solid-network or
+solution film drying. This document serves as a user’s guide and reference.
+%
+%\vfill
+%
+%%%%Preface
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Preface}
+\vfill
+\chapter*{Preface}
+%
+Over the course of development of this new generation of \emph{Goma} documentation, the volume of
+information collected between the covers has grown immensely while the style of presentation of
+that information has also been improved to be more helpful to the analyst and easier to use.
+However, having set the goal of producing both a printed and electronic manual, the process has
+made it no longer practical to try to contain all the attending knowledge in a single printed
+volume. Thus, we have divided the printed version along the boundaries most natural to \emph{Goma},
+that being a separation according to the division of problem data between the two primary ASCII
+input files. \\
+%
+The user of \emph{Goma} software now has a two-volume manual with information both common and
+unique to each volume. The introductory information (Chapters 1 through 3) is common to both
+volumes, as is the closing information (References, Appendix and Distribution). The unique
+contents of Volume 1 consist of the Problem Definition (Chapter 4), while Volume 2 contains the
+Material File description (Chapter 5). In the respective locations of the Chapter 4 and 5
+information, a brief explanatory note has been inserted as a placeholder. The user will find a
+complete set of introductory and closing information in each volume, but the Table of Contents
+and Index entries in each volume will also be unique, containing only the information appropriate
+for the particular volume. \\
+%
+Also for practical reasons, this electronic version of the manual will retain the single volume
+configuration. Thus the structure will differ from the printed version but the contents of the two
+versions of the manual will contain the same information.
+%
+%%%%Acknowledgement
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Acknowledgement}
+\chapter*{Acknowledgement}
+%
+Development of \emph{Goma} was funded in part by the Engineering Science Research Foundation,
+Laboratory Directed Research and Development, the Coating and Related Manufacturing
+Processes Consortium (CRMPC), the Specialty Metals Processing Consortium (SMPC), the
+Accelerated Scientific Computing Initiative (ASCI) program of the DOE, and the Basic Energy
+Science Program of the DOE. The authors would like to thank Rick Givler, Mike Kanouff, Anne
+Grillet, Mark Christon, John Torczynski, and many others for their helpful comments during the
+process of developing the code and reviewing this manual. The third and fourth editions of this
+manual have benefited from several others. Namely, Chris Monroe, who took over the
+responsibility for updating and distributing the second edition of the report, and several internal
+Sandia users together with several members of the Coating and Related Manufacturing Processes Consortium who provided valuable feedback.
+%
+%%% Table of Contents
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Contents}
+\tableofcontents
+%
+%
+%%% List of Figures
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+%
+%
+%%% List of Tables
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+%

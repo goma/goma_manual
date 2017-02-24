@@ -1,0 +1,104 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Goma Manual
+% Kristianto Tjiptowidjojo
+% University of New Mexico
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Declaration of document type
+\documentclass[12pt,oneside]{book}
+
+\usepackage{parskip}
+
+%%% Include common mathematics packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{pifont}
+\usepackage{latexsym}
+\usepackage{bm}
+
+%%% Packages to include eps or ps figures into the document
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{subfigure}
+\usepackage{rotating}
+\usepackage{lscape}
+
+%%% Set up formatting of the document
+\usepackage{setspace}
+\onehalfspacing
+\oddsidemargin	= 0.5in		% 1.5" left margin
+\evensidemargin	= 0in		% irrelevant; right margin is
+                                % set by textwidth+oddsidemargin
+\topmargin		= 0.0in
+\headheight		= 15pt
+\headsep		= 0.25in
+\textwidth		= 6.0in	% width lengths fully specified
+\textheight		= 8in % all heights+sep = 9 = 11"-(2" margins)
+
+
+\footskip		= 0.5in
+\parskip		= 2ex plus0.5ex minus0ex % extra space after paragraph
+\parindent		= 0in	 % no indent on new paragraph
+
+%%% Prepare headers and footers
+%\usepackage{fancyheadings}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+%%%% Include package for customizing figure captions
+%\usepackage[scriptsize]{caption}
+
+\usepackage{multirow}
+
+%% Include package for fancy frame box
+\usepackage{fancybox}
+
+%% Make new environment to set a boxed input deck
+\newlength{\mylength}
+\setlength{\fboxsep}{15pt}
+\setlength{\mylength}{\linewidth}
+\addtolength{\mylength}{-2\fboxsep}
+\addtolength{\mylength}{-2\fboxrule}
+
+%%%Include package to force new page
+\usepackage{afterpage}
+
+%Bibliography style
+\usepackage{natbib}
+\bibliographystyle{cpfp1}
+
+%%% Include package to put hyperlink and bookmarks in PDF
+\usepackage{hyperref}
+\hypersetup{linktoc=all}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Begin the actual document %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	
+	%%% Front Matter (Title Page, Copyright, Acknowledgements, Table of Contents, List of Tables, List of Figures}
+	%\setcounter{page}{1}
+	%\pagenumbering{roman}
+	\include{frontmatter}
+	
+	%%% Set up formatting for main document
+	%\lhead{Chapter \thechapter.  \chaptermark}
+	\lhead{\slshape \leftmark}
+	\setcounter{chapter}{0}
+	\setcounter{page}{0}
+	\pagenumbering{arabic}
+	\renewcommand{\headrulewidth}{0.4pt}
+	\rhead{\thepage}
+	\cfoot{}
+	%%% Main document
+	\include{Chapter_1/introduction}
+	\include{Chapter_2/background_information}
+    \include{Chapter_3/code_structure}
+    \include{Chapter_4/data_input}
+    \newpage
+    \phantomsection
+	\addcontentsline{toc}{chapter}{References}
+	\bibliography{references}
+	
+	%%% End of document
+\end{document} 

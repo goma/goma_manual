@@ -1,0 +1,33 @@
+\subsection{FEM file}
+%
+\shadowbox %
+{
+\parbox{\mylength}{
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{0pt}
+\texttt{FEM file =  \textless file\_name \textgreater}	
+}}
+%
+\paragraph{Description/Usage}
+%
+This required card specifies the name of the EXODUS II finite element mesh file. Any EXODUS II file name is permissible, as specified below.
+%
+\begin{center}
+	\begin{tabular}{ l p{10cm} }
+		\textless file\_name \textgreater & A file name of the form prefix.exoII. The prefix portion is any user-specified alpha-numeric string, which can be used as a problem-type descriptor. Preprocessors and postprocessors (like AVS) might require the “.exoII” suffix so it is a required part of the file designation. The maximum length of the file name is 85 characters
+	\end{tabular}
+\end{center}
+%
+\paragraph{Examples}
+%
+Following is a sample card:
+%
+\texttt{FEM file = in.exoII}
+%
+\paragraph{Technical Discussion}
+%
+\paragraph{Theory}
+%
+\paragraph{FAQ}
+%
+\paragraph{References}
